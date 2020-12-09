@@ -20,8 +20,52 @@ to run the app.
 First, we need to tell Heroku which applications and dependencies are required to run our app:</p>
 <pre>"pip3 freeze --local > requirements.txt".</pre> <p>Next, the Procfile is what Heroku looks for to know which file runs the app, and how to
 run it, so we'll use the echo command: <pre> "echo web: python app.py > Procfile".</pre> </p>
-<li><a href="https://youtu.be/y72Dq3GRxhc" target="_blank">Intro</a></li>
-<li><a href="https://youtu.be/y72Dq3GRxhc" target="_blank">Intro</a></li>
+<p>this video goes through steps on connecting github to heroku procfile, requirements in order to allow heroku to build the app. IMPORTANT steps.</p>
+<li><a href="https://youtu.be/TM0QBh_vx1U" target="_blank"> Connect Flask To MongoDB Atlas
+</a></li>
+<p>wirign up flask with mongo, using third party library. called 'flask-pymongo'.</p>
+<pre> pip3 install flask-pymongo</pre>
+<p>We also need to install a package called 'dnsython' in order to use the Mongo SRV connection string.</p>
+<pre>pip3 install dnspython </pre>
+<h4>NOTE</h4>
+<p>It's important to remember that whenever you install new packages, you must update the
+requirements.txt file so that Heroku knows we require more to run the app.</p>
+<pre>pip3 freeze --local > requirements.txt </pre>
+<p>making the templates folder </p>
+<pre>mkdir templates</pre>
+<pre>touch templates/tasks.html</pre>
+<p>We'll use the Jinja templating language to loop through each task item from within our
+collection.
+<pre>
+{% for task in tasks %}</pre> <p> and to end block:</p>  <pre>{% endfor %}.</pre> It's alway good to supply any closing tags</p>
+
+<li><a href="https://youtu.be/oeOg4CTPLPE" target="_blank"> Template Inheritance
+</a></li>
+<p>creating the template / refactoring - parent template</p>
+<p>we need to create a new file within the templates directory called "base.html".
+The base template will contain all main references to our external files and third-party libraries,
+for JavaScript and CSS, that we'll use across the entire application.</p>
+<p>fucntions of a base template is so that we dont have to repeat ourselves.</p>
+
+<p>inside the base template- we can call block -content anything just extend it using block content_more_content for example</p>
+
+<pre>{% block content %}
+    {% endblock %}</pre>
+
+
+<p>inside of the tasks page we extned using.... In order to display this from within our base template, we need to extend this file from
+the base.html, wrapped in quotes.</p>
+
+<pre>{% extends "base".html" %}</pre>
+<pre>{% block content %} </pre>
+
+
+
+<li><a href="https://youtu.be/oeOg4CTPLPE" target="_blank"> Template Inheritance
+</a></li>
+
+<li><a href="https://youtu.be/oeOg4CTPLPE" target="_blank"> Template Inheritance
+</a></li>
 
 </ol>
 
