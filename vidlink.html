@@ -13,7 +13,13 @@
 <li><a href="https://youtu.be/bNg9AcVPdHo" target="_blank">Create the flask application</a></li>
 <p>pip3 install Flask </p> <p>also creating initial files in python etc git ignore etc.</p>
 <p>kill flask instances on a terminal <pre>pkill -9 python3</pre></p>
-<li><a href="https://youtu.be/y72Dq3GRxhc" target="_blank">Intro</a></li>
+<li><a href="https://youtu.be/YfQIUSuPm2w" target="_blank"> Deploy The Application To Heroku
+</a></li>
+<p>Before we create our Heroku application, we need to setup some files that Heroku needs
+to run the app.
+First, we need to tell Heroku which applications and dependencies are required to run our app:</p>
+<pre>"pip3 freeze --local > requirements.txt".</pre> <p>Next, the Procfile is what Heroku looks for to know which file runs the app, and how to
+run it, so we'll use the echo command: <pre> "echo web: python app.py > Procfile".</pre> </p>
 <li><a href="https://youtu.be/y72Dq3GRxhc" target="_blank">Intro</a></li>
 <li><a href="https://youtu.be/y72Dq3GRxhc" target="_blank">Intro</a></li>
 
