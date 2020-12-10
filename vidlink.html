@@ -196,6 +196,20 @@ Allow users to filter documents from the database
 Create an Index on the database collection, using different fields, to perform search functionality
 </p>
 
+<p>to make an index in the python interpreter terminal: </p> <pre>python3 </pre><p>this will open the interpreter.</p>
+<p>we nee to import the pymongo from the mongo variable in the app.py file. we do this by... </p>
+
+<pre>from app import mongo</pre>
+<p>step 2</p>
+<pre>mongo.db.tasks.create_index([("task_name", "text"),("task_description", "text")])</pre>
+<p>exit the interpreter using </p>
+<pre>quit()</pre>
+
+
+
+
+
+
 
 
 </body>
